@@ -157,10 +157,10 @@ if (saranForm) {
 
 // Back-to-top Button
 const backBtn = document.createElement('button');
-backBtn.textContent = '⬆';
+backBtn.textContent = 'Atas'; // Ganti ⬆ dengan teks
 backBtn.style.cssText = `
   position:fixed; bottom:40px; right:40px; padding:10px 15px; 
-  font-size:1.2rem; border:none; border-radius:50%; background:#4caf50; 
+  font-size:1rem; border:none; border-radius:25px; background:#4caf50; 
   color:white; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.3); opacity:0;
   transition: opacity 0.4s ease;
 `;
@@ -174,7 +174,6 @@ window.addEventListener('scroll', () => {
   backBtn.style.opacity = window.scrollY > 300 ? 1 : 0;
 });
 
-
 // Dark Mode 
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
@@ -182,17 +181,17 @@ const body = document.body;
 // Cek preferensi di localStorage
 if (localStorage.getItem('darkMode') === 'enabled') {
   body.classList.add('dark-mode');
-  if (darkModeToggle) darkModeToggle.textContent = '☀️ Light Mode';
+  if (darkModeToggle) darkModeToggle.textContent = 'Light Mode';
 }
 
 if (darkModeToggle) {
   darkModeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
     if (body.classList.contains('dark-mode')) {
-      darkModeToggle.textContent = '☀️ Light Mode';
+      darkModeToggle.textContent = 'Light Mode';
       localStorage.setItem('darkMode', 'enabled');
     } else {
-      darkModeToggle.textContent = '🌙 Dark Mode';
+      darkModeToggle.textContent = 'Dark Mode';
       localStorage.setItem('darkMode', 'disabled');
     }
   });
