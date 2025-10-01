@@ -157,7 +157,7 @@ if (saranForm) {
 
 // Back-to-top Button
 const backBtn = document.createElement('button');
-backBtn.textContent = 'Atas'; // Ganti ⬆ dengan teks
+backBtn.textContent = 'Atas';
 backBtn.style.cssText = `
   position:fixed; bottom:40px; right:40px; padding:10px 15px; 
   font-size:1rem; border:none; border-radius:25px; background:#4caf50; 
